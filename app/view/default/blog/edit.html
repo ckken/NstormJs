@@ -1,0 +1,35 @@
+<%- include header.html %>
+
+<div class="title">编辑数据[<a href="/">返回列表</a>]</div>
+<form action="/blog/userblog/update/id/<%= todo.id %>" method="post" enctype="multipart/form-data">
+  <table>
+    <tr>
+      <td class="tRight">标题</td>
+      <td><input type="text" name="title" class="l" value="<%= todo.title %>" /></td>
+    </tr>
+    
+    <tr>
+      <td class="tRight">缩略图</td>
+      <td><span style="float:right"><img width="50" src="<%= todo.pic %>"></span><input type="file" name="pic" value="上传"></td>
+    </tr>
+    
+    <tr>
+      <td class="tRight">内容</td>
+      <td><textarea name="content" class="qqeditor" style="width:700px; height:250px;"><%-todo.content%></textarea></td>
+    </tr>
+    
+    <tr>
+      <td class="tRight">状态</td>
+      <td>上线<input name="status" type="radio" value="1" <% if(todo.status==true){ %>checked<% }%>> -
+          下线<input name="status" type="radio" value="0" <% if(todo.status==false){ %>checked<% }%>>
+      </td>
+    </tr>
+    
+    <tr>
+      <td></td>
+      <td><input type="submit" class="submit" value="更新" /></td>
+    </tr>
+  </table>
+</form>
+<script>Cmodule='edit',Caction='',Cpluge='';</script>
+<%- include footer.html %>

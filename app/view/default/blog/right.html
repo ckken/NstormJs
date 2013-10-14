@@ -1,0 +1,19 @@
+<div class="slideOne">
+  <div class="member item pjax">
+    <h2>会员数<span class="num"><%-usernum%></span> 最新加入作者 </h2>
+    <% if('undefined'!=typeof userdata){ %>
+    <% userdata.forEach(function(u){ %>
+    <a title="用户昵称： <%=u.name%>&#10;加入时间： <%=u.createtime%>&#10;最后登录： <%=u.logintime%>&#10;发表话题： <%=u.postnum%>" href="/blog/userblog/author/name/<%=u.name%>"><img class="avatar" src="http://www.gravatar.com/avatar/<%=u.avatar%>?size=32"> 
+    <p><%=u.name%></p>
+    </a>
+    <% }) %>
+    <% }%>
+
+
+
+  </div>
+
+  <div class="item">
+<p>Nodejs Nstorm MVC 框架 git: <a href="https://github.com/NodejsTeam/Nstorm" class="btn active" target="_blank">源码下载</a></p>
+  </div>
+</div>

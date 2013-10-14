@@ -1,0 +1,10 @@
+/*theme v 1.0 design by ken*/
+/*popwindow*/
+#popwindow{ position: absolute; width:100%; height:100%; z-index:9; background:#000 url(/images/user/bgload.gif) center center no-repeat;
+filter:alpha(Opacity=90);-moz-opacity:0.9;opacity: 0.9;
+}
+.logo{ width:427px; margin:0 auto 30px; background:url(/images/login.png) no-repeat; height:170px; display:block }
+.content{ width:650px;}
+.login{ background:url(/images/login.png) 1px -195px no-repeat; width:197px; height:52px; border:0; cursor:pointer}
+.inputbox{ border:1px solid #444 ;line-height:30px; height:30px; width:390px; padding:9px 20px; font-size:16px; float: left; margin-right:10px; color:#444}
+.tips{ height:30px; line-height:30px; font-size:16px; text-align:center; margin-top:20px; color:#444;}

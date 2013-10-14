@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="zh-CN">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="zh-CN">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="zh-CN">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<title><%= C.site_name %></title>
+<link href="<%=C.surl%>/css/blog.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="<%=C.surl%>/images/ico.png" />
+<!--[if lt IE 9]>
+<script src="/js/style/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+</head>
+<body>
+<header class="header" id="topbar">
+  <div class="wrapper clearfix"> <a class="logo" title="网站首页" href="/"><img src="<%=C.surl%>/images/logo.gif"></a>
+    <nav class="nav" id="main_menu">
+      <% if('undefined'!==typeof user){ %>
+      <ul>
+        <li><img class="avatar" src="http://www.gravatar.com/avatar/<%- user.avatar%>?size=32"> </li>
+        <li><a title="ip:<%- user.ip%>">
+          <%- user.name%>
+          </a></li>
+        <li><a href="/member/gate/logout/">退 出</a></li>
+        <li <%if(C.a=='add'){%>class="current-menu-item"<%}%>><a href="/blog/userblog/add/">发布话题</a></li>
+        <li <%if(C.a=='my'){%>class="current-menu-item"<%}%>><a href="/blog/userblog/my/">我的话题</a></li>
+        <li>
+          <%if(user.status){%>
+          <span class="btn-success btn">已激活✔</span>
+          <% }else{%>
+          <a rel='<%-C.now%>' id="validateMail" class="btn ">激活邮箱</a>
+          <% }%>
+        </li>
+      </ul>
+      <% }%>
+    </nav>
+  </div>
+</header>
+<!--header-->
+<div class="container" id="container">
+<div class="blogsbg">
+<nav class="blog-nav">
+  <div class="wrapper clearfix"> <span class="searchbox">
+    <form  action="/">
+      <input type="search" class="search" name="s" placeholder="search......" x-webkit-speech="" x-webkit-grammar="builtin:translate">
+    </form>
+    </span>
+    <ul>
+      <!--li-->
+       <li class="current-menu-item"><a href="#">nodejs实验室</a></li>
+       <li><a href="#">关于我们</a></li>
+    </ul>
+  </div>
+</nav>
+<!--nav-->
+
+<div class="wrapper blogbox clearfix">

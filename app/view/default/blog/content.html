@@ -1,0 +1,38 @@
+<%- include header.html %>
+
+<div class="cat-blog pjax ckblog">
+
+    <div class="main">
+        <div class="header_info clearfix">
+            <div><img class="avatar" src="http://www.gravatar.com/avatar/<%- todo.avatar%>?size=48"></div>
+            <h2 class="title"><%= todo.title %></h2>
+            <div class="postinfo"> <a href="/blog/userblog/author/name/<%-todo.author%>" title="由 <%-todo.author%> 发布" rel="author">
+                <%-todo.author%>
+            </a> /
+                <%- todo.ip%>
+                /
+                创建
+                <%- todo.creattime%>
+                /
+                更新
+                <%- todo.updatetime%>
+                / 访问量 <%- view %>
+
+                <% if (user.email==todo.email||user.email=='ckken@qq.com') { %>
+                / <span class="editpost">
+          <a href="/blog/userblog/edit/id/<%- todo._id%>">修改</a> / 
+          <a href="/blog/userblog/delete/id/<%- todo._id%>" onclick="return confirm('删除以后不能恢复的，确定？')">删除</a>
+                    </span>
+                <% } %>
+            </div>
+        </div>
+        <div class="entry">
+            <%-todo.content%>
+        </div>
+
+    </div>
+
+
+</div>
+<%- include right.html %>
+<%- include footer.html %>

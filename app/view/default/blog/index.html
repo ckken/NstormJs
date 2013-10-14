@@ -1,0 +1,44 @@
+<% include header.html %>
+
+<div class="cat-blog pjax ckblog blogindex">
+  <div class="page_nav"> 
+   NodeJs 在线互动交流平台
+  </div>
+  <ul>
+    <% for (var i = 0; i < todos.length; i++) {
+        var todo = todos[i];
+      %>
+    <li class="clearfix item">
+      <div class="main">
+        <div class="header_info clearfix">
+          <div class="avatar"><img class="avatar" src="http://www.gravatar.com/avatar/<%- todo.avatar%>?size=48"></div>
+          <h2 class="title">
+          <a href="/blog/list/content/id/<%-todo.id%>" title="<%= todo.title %>&#10;作者： <%=todo.author%>&#10;发布时间： <%=todo.creattime%>">
+          <%= todo.title %>
+          </a>
+          </h2>
+          <div class="postinfo"> <a href="/blog/userblog/author/name/<%-todo.author%>" title="由 <%-todo.author%> 发布" rel="author">
+            <%-todo.author%>
+            </a> /
+            <%- todo.ip%>
+            / 
+            <%- todo.creattime%>
+             / 访问量 <%- todo.view %>
+            / <span class="editpost"> 
+            <% if (user.email==todo.email||user.email=='ckken@qq.com') { %>
+          <a href="/blog/userblog/edit/id/<%- todo._id%>">修改</a> / 
+          <a href="/blog/userblog/delete/id/<%- todo._id%>" onclick="return confirm('删除以后不能恢复的，确定？')">删除</a>
+            <% } %>
+            </span> </div>
+        </div>
+
+      </div>
+    </li>
+    <% } %>
+  </ul>
+  <div class="page_navi clearfix">
+    <%- page%>
+  </div>
+</div>
+<%- include right.html %>
+<%- include footer.html %>

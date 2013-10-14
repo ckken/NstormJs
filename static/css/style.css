@@ -1,0 +1,170 @@
+@charset "utf-8";
+body, th, td, input, select, textarea, button {  font:12px/1.5 tahoma,arial,sans-serif; color:#555; }
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, dt, dd, form, fieldset { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: 12px; color:#000; }
+ul li { list-style: none; }
+a { color: #000; text-decoration: none; }
+a:hover { }
+img { border:0; }
+.fLeft,.f_l { float:left }
+.fRig,.f_r { float:right }
+.tl { text-align:left; }
+.tc { text-align:center; }
+.tr { text-align:right; }
+.dis { display:block; }
+.inline { display:inline; }
+.none { display:none; }
+.p10{ padding:10px;}
+/*clearfix*/
+	.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; zoom: 1; }
+/* Hide from IE Mac \*/
+	.clearfix { display: block; }
+/* End hide from IE Mac*/
+	.clear { clear:both }
+	
+html,body{
+    -webkit-text-size-adjust:none;
+}
+
+/*色块按钮*/
+.btn{display:inline-block; padding:0 8px; text-align:center; height:20px; line-height:20px;cursor:pointer; margin-right:3px; border:0; color:#fff; cursor:pointer;}
+.blue{ background: #3A6EA5}
+.green{ background:#72B626 }
+.hgreen{ background: #7FCB2A}
+.gray{background: #757D83}
+
+/*头部处理*/
+div.headTitle { float:left;height:40px;background:url(images/admin_logo.gif) 10px -5px no-repeat; width:130px;}
+div.nav { float:right; position:relative; padding:8px; color:#fff; font-size:12px;  }
+div.nav a{ color:white;border-left:1px solid #548fcb; display:inline-block; padding:0 8px; }
+div.nav a:hover { color:#D9ECFF }
+div.header { height:40px; background:#3A6EA5}
+
+.topmenu { font-size: 14px; margin:10px 0 0 0px; float:left;}
+.topmenu li { float: left;  list-style-type: none; margin-right: 1px; }
+.topmenu span a{font-size:12px; line-height:20px; color:#fff; padding:0 12px; display:inline-block; height:33px; line-height:33px;} 
+.topmenu .current a,.topmenu span a:hover{ background:#fff; color:#367ABB;}
+
+/*主题框*/
+.loginbody{ background: #888}
+div.main { background:#fff; padding:20px; padding-left:210px; position:relative; }
+div.full { width:96%; margin:5pt; padding:5px 5px }
+#loader { display:block; position:absolute; top:20%; left:35%; padding:23px 70px; border:5px solid #ddd;z-index:2; background:#fff url(images/ajaxLoader.gif) 10px 10px no-repeat; }
+#tips{ display:block; position:absolute; top:20%; left:35%; padding:23px 70px; background:#000;filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8; opacity: 0.8; color:#fff; display:none; }
+/*主框架*/
+.container{ position:relative}
+.main table.edit td{ padding:5px;}
+.main .edit_button{ padding:10px;}
+
+/*menu*/
+div.menu{ width:200px; position:absolute; left:0; top:0; z-index:9}
+div.menu h1,div.menu ul li a{ padding:10px; height:19px;}
+div.menu h1,div.menu ul li a:hover{ background:#e8edf3; color:#000;}
+div.menu h1{ background:none; border-bottom:1px solid #DADBDF}
+
+div.menu h1{ font-size:12px; color:#275D96}
+div.menu ul{ padding:0; margin:0;}
+div.menu ul li{ list-style:none; }
+div.menu ul li a{border-bottom:1px solid #dadbdf; border-top:1px solid #fff; display:block;}
+
+
+/*操作功能*/
+div.operate a,.imgButton,div.operate .search .btn{display:inline-block; width:4em; padding:0 5px; text-align:center; height:20px; line-height:20px;cursor:pointer; margin-right:3px; border:0; color:#fff; cursor:pointer;}
+
+div.operate { height:30px}
+div.operate a,.imgButton,div.operate .search .btn { background:#3A6EA5; }
+div.operate .search{ float:right;}
+div.operate .search .input{ width:150px; float:left; height:14px;}
+div.operate .search .btn{ margin-left:5px;}
+
+
+/*表单操作*/
+input, textarea, select { padding:5px; border: 1px solid #d0d0d0;background: #FFF url(images/input.png) repeat-x; margin:0; overflow:none;}
+input.focus { filter:blur(strength=50); border:1pt solid #72B626}
+input.button,input.submit { height:23px; min-width:65px; margin:0; border:0; padding: 0 10px; letter-spacing:3px; text-align:center;background:#3A6EA5; color:#fff;cursor:pointer }
+/*.huge { width:350px }
+.large { width:280px }
+.medium { width:150px }
+.small { width:65px!important }
+.mini { width:35px }*/
+input.l{ width:350px}
+input.m{ width:280px}
+input.s{ width:160px}
+.sort_input{ text-align:center; width:3em}
+
+
+/*列表处理*/
+
+div.pic { padding:3px; float:left; text-align:center }
+div.pic img { border:1px solid #eee; padding:2px; }
+div.list { width:100% }
+div.title { padding:5px; margin:5px 0px 10px; text-align:left; font-size:12px; border-bottom:1px solid #eee; color:#666}
+div.page { background:#FBFAF8; padding:5px; margin:5px 0px; text-align:right }
+
+/*table*/
+table {  margin:3px 0px; padding:8px; border-collapse:collapse; border:1px solid ccc; text-align:left; width:100%; }
+table pre { width:auto; margin:0; padding:0; border:0; background-color:transparent; }
+table th { vertical-align:baseline; background:#EEF3F7; border-bottom:1px solid #D5DFE8; }
+table th a{ color:#000;}
+table td { border-bottom:1px solid #eee; padding: 8px}
+table p { margin:0 0 2px 0; }
+table ul, table li { list-style-type:none; margin:0; padding:0; }
+table td em { color:#0000ff; font-weight:normal; }
+table .table_value { color:#0F93D2; }
+table ul{ margin:20px; padding:0; }
+table ul li { list-style-type:disc; }
+.ke-toolbar-table td,.ke-bottom-outer td{ padding:0!important;}
+table td span.tips{ color: #888; margin-left: 5px;}
+
+.over td{ background-color:#fbffe4 }
+.out td{ background-color:#fff }
+.down td{ background-color: #EEF7FF}
+.click td{ background-color: #FFE6E6 }
+
+
+table td.topTd { display:none }
+table td.bottomTd { display:none; }
+table.message th,  table.message td,  table.select th,  table.select td,  table.order th,  table.order td,  table.error th,  table.error td,  table.login th,  table.login td,  table.list th,table.list td {padding:8px }
+
+
+
+/*登录界面*/
+
+.login_box_input{ margin-top:10%; padding-bottom:20px;}
+.login_box_input input.inbox{ border:1px solid #2d5a89; width:200px;}
+.login_box_input td{ background:none; border:0;}
+.post_log{ width:500px; margin:0 auto; background:url(images/admin_logo.gif) left center no-repeat; padding-left:200px; }
+.post_log .tRight{ text-align:right; color:#fff;}
+.post_log td{ padding:5px!important;}
+.login_box_input{ color:#fff;}
+.login_box_input .result{ width:700px; margin:0 auto;text-align:center; padding:5px 0; margin-top:30px; font-weight:bold; border-bottom:1px solid #376699}
+
+.log_btn{ background:#427dba; padding:5px 20px; color:#fff; border:0;}
+.log_wrapper{ width:980px; margin:0 auto}
+.log_box_body{ background:#3a6ea5}
+
+/*admin btn*/
+.abtn{padding: 5px 8px!important;height: 25px;line-height: 25px;background: #A7B0B9;border: 1px solid #8B8B93;color: white;}
+
+
+
+/*自定义效果*/
+.touming{filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5; opacity: 0.5;  }
+
+/*成功页面信息*/
+div.message,.error { width:75%; padding:5pt; float:none; margin:15% auto 0% auto; clear:both; text-align:center;background:#fff; padding:10px; }
+
+/*菜单样式*/
+.category td{ padding: 1px}
+.category input{ padding: 1px 5px;}
+
+/*footer*/
+.footer{ padding:20px; border-top:1px solid #eee;}
+
+/*page*/
+.page { padding:20px 0; font-size:12px; color:#666; }
+.page a, .page span { background:#222; font-size:12px; color:#fff; padding:0px 12px; text-decoration:none; height:20px; line-height:20px; display:inline-block; margin:0 3px;}
+.page a:hover, .page span { background:#f50; color:#fff; text-decoration:none; }
+.page a.act, .page .current,.page .on { background:#2B7F99; color:#fff; text-decoration:none; }
+.page input{ height:18px; line-height:18px; margin:0 10px;}

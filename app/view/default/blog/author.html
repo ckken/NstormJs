@@ -1,0 +1,62 @@
+<%- include header.html %>
+
+<div class="cat-blog pjax ckblog">
+  <div class="page_nav">
+    <%-author%>
+    话题 </div>
+  <ul>
+    <% for (var i = 0; i < todos.length; i++) {
+        var todo = todos[i];
+      %>
+    <li class="clearfix item">
+      <div class="main">
+        <div class="header_info clearfix">
+          <div><img class="avatar" src="http://www.gravatar.com/avatar/<%- todo.avatar%>?size=48"></div>
+          <h2 class="title"> <a href="/blog/list/content/id/<%-todo.id%>"> <%= todo.title %> </a> </h2>
+          <div class="postinfo"> <a href="/blog/userblog/author/name/<%-todo.author%>" title="由 <%-todo.author%> 发布" rel="author">
+            <%-todo.author%>
+            </a> /
+            <%- todo.ip%>
+            /
+            创建
+            <%- todo.creattime%>
+            /
+            更新
+            <%- todo.updatetime%>
+             / 访问量 <%- todo.view %>
+            / <span class="editpost">
+            <% if (user.email==todo.email||user.email=='ckken@qq.com') { %>
+            <a href="/blog/userblog/edit/id/<%- todo._id%>">修改</a> / <a href="/blog/userblog/delete/id/<%- todo._id%>" onclick="return confirm('删除以后不能恢复的，确定？')">删除</a>
+            <% } %>
+            </span> </div>
+        </div>
+        <div class="excerpt-desc">
+          <% if (todo.pic!='') { %>
+          <img src="<%=C.purl%><%- todo.pic%>" width="80" height="80">
+          <% } %>
+          <%-todo.content%>
+        </div>
+        <div class="readmore"> <a class="readmorebtn" href="/blog/list/content/id/<%-todo.id%>">阅读更多</a> <span class="readmorecomments"></span> </div>
+      </div>
+    </li>
+    <% } %>
+  </ul>
+  <div class="page_navi clearfix">
+    <%- page%>
+  </div>
+</div>
+
+<div class="slideOne">
+  <div class="memberinfo item pjax">
+    <h2>作者介绍</h2>
+    <div class="clearfix">
+	<img class="avatar" src="http://www.gravatar.com/avatar/<%- userinfo.avatar%>?size=60">
+    <ul>
+    <li>话题数:<span class="num"><%-userinfo.postnum%></span></li>
+    <li>个人简介:</li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+<%- include footer.html %>

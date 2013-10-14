@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="zh-CN">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="zh-CN">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="zh-CN">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title><%= C.site_name %></title>
+    <link href="<%=C.surl%>/css/blog.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="<%=C.surl%>/images/ico.png" />
+
+</head>
+<body>
+<div class="header" id="topbar">
+    <div class="wrapper clearfix"> <a class="logo" title="网站首页" href="/"><img src="<%=C.surl%>/images/logo.gif"></a>
+        <nav class="nav" id="main_menu">
+            <% if('undefined'!==typeof user){ %>
+            <ul>
+                <li><img class="avatar" src="http://www.gravatar.com/avatar/<%- user.avatar%>?size=32"> </li>
+                <li><a title="ip:<%- user.ip%>"><%- user.name%></a></li>
+                <li><a href="/member/gate/logout/">退 出</a></li>
+                <li <%if(C.a=='add'){%>class="current-menu-item"<%}%>><a href="/blog/userblog/add/">发布话题</a></li>
+                <li <%if(C.a=='my'){%>class="current-menu-item"<%}%>><a href="/blog/userblog/my/">我的话题</a></li>
+                <li><%if(user.status){%><span class="btn-success btn">已激活✔</span><% }else{%><a rel='<%-C.now%>' id="validateMail" class="btn ">激活邮箱</a><% }%></li>
+            </ul>
+            <% }%>
+        </nav>
+    </div>
+</div>
+<div class="container" id="container">
+    <div class="blogsbg">
+        <div class="blog-nav">
+            <div class="wrapper clearfix"> <span class="searchbox">
+    <form  action="/">
+        <input type="search" class="search" name="s" placeholder="search......" x-webkit-speech="" x-webkit-grammar="builtin:translate">
+    </form>
+    </span>
+                <ul>
+                    <!--nav-->
+                     <li><a href="#">nodejs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper blogbox clearfix">

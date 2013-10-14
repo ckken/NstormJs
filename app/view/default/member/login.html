@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>nodejs labs</title>
+<link href="<%=C.surl%>/css/common.css" rel="stylesheet" type="text/css">
+<link href="<%=C.surl%>/css/member.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="popwindow"></div>
+<script>Cmodule='user',Caction='',Cpluge='';
+    var User = {"uid":"1","maps":"#","pic":"images\/bg.jpg"};
+</script>
+<div id="content" class="content">
+  <a class="logo">  </a>
+  <div class="box">
+      <input name="email" id="email" class="inputbox" placeholder="输入邮箱直接登录">
+    <input type="button" class="btn login" id="login" value="">
+  </div>
+  <div class="tips" id="tips"></div>
+</div>
+<script>
+    var Config = {
+        img:'<%=C.surl%>/images',
+        root:'',
+        'jsurl':'<%=C.surl%>/js/',
+		'site':''
+    };
+</script> 
+<script src="<%=C.surl%>/js/seajs/aConfig.js"></script>
+</body>
+</html>
