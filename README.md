@@ -1,6 +1,8 @@
 Nstorm the Nodejs mvc framework
 =========
 
+Demo : http://112.124.64.160:3000/
+
 author : @KenZR 
 
 sina weibo: http://weibo.com/cksky 
@@ -46,8 +48,6 @@ static include :
            style ：function modules
            
 app.js is the entry
-
-the Demo is : http://node.wvovo.com/
       
       
       
