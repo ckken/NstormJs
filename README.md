@@ -1,7 +1,7 @@
 Nstorm the Nodejs mvc framework
 =========
 
-Demo : http://112.124.64.160:3000/
+Demo : http://anstorm.wvovo.com/ (静态版本暂不提供DEMO  这是ANGULAR版本https://github.com/ckken/ANstormJs)
 
 author : @KenZR 
 
